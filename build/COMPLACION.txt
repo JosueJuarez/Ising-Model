@@ -1,0 +1,6 @@
+ 
+En la terminal correr
+
+cmake ../
+make
+./IsingModel

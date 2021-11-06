@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/IsingModel.dir/main.cpp.o -o IsingModel 
