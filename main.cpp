@@ -18,13 +18,13 @@
 
 int main()
 {
-	TwoDIsingModel test = TwoDIsingModel(1.2, 3);
-	//test.PrintLattice();
+	TwoDIsingModel test = TwoDIsingModel(1.2, 100.0, 2);
+	test.PrintLattice();
 
 	float prueba = test.Energy();
+	std::cout << "La energía es:" << ' ';
 	std::cout << prueba << ' ';
 
-	//test.PrintLattice();
 	return 0;
 }
 
