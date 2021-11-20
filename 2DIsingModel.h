@@ -80,9 +80,29 @@ private:
 			lattice[ri][rj] = -lattice[ri][rj];
 		}
 
-		else if(dE == 8*J)
+		else if((dE == 8*J) && RandomProbability() < P8)
 		{
-			
+			lattice[ri][rj] = -lattice[ri][rj];
+		}
+
+		else if((dE == 4*J) && RandomProbability() < P4)
+		{
+			lattice[ri][rj] = -lattice[ri][rj];
+		}
+
+		else if((dE == 0) && RandomProbability() < P0)
+		{
+			lattice[ri][rj] = -lattice[ri][rj];
+		}
+
+		else if((dE == -4*J) && RandomProbability() < Pm4)
+		{
+			lattice[ri][rj] = -lattice[ri][rj];
+		}
+
+		else if((dE == -8*J) && RandomProbability() < Pm8)
+		{
+			lattice[ri][rj] = -lattice[ri][rj];
 		}
 
 	}
@@ -174,6 +194,14 @@ public:
 			std::cout << std::endl;
 		}
 		return H/2;
+	}
+
+	void Simulation(int iterations)
+	{
+		for(int i =0; i < iterations; i++)
+		{
+			MetropolisStep();
+		}
 	}
 
 

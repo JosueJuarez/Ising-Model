@@ -20,10 +20,10 @@ int main()
 {
 	TwoDIsingModel test = TwoDIsingModel(1.2, 100.0, 2);
 	test.PrintLattice();
-
-	float prueba = test.Energy();
-	std::cout << "La energía es:" << ' ';
-	std::cout << prueba << ' ';
+	std::cout << "La energía es:" << ' ' << test.Energy() << ' ';
+	test.Simulation(100);
+	test.PrintLattice();
+	std::cout << "La energía es:" << ' ' << test.Energy() << ' ';
 
 	return 0;
 }
